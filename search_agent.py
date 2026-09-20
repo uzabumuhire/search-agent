@@ -17,13 +17,13 @@ You are a research planning assistant.
 agent = Agent(
     name="Research Planner",
     instructions=instructions,
-    model="gpt-4.1",
+    model="gpt-4.1",                    # Explicitly specify the model to use
     model_settings=ModelSettings(
-        temperature=0.0,
-        max_tokens=150,
-        top_p=1.0,
-        frequency_penalty=0.5,
-        presence_penalty=0.5,
+        temperature=0.0,                # Set to 0 to reduce variability in output
+        max_tokens=150,                 # Set to 150 to limit output length
+        top_p=1.0,                      # Set to 1.0 to consider all tokens
+        frequency_penalty=0.5,          # Set to 0.5 to reduce repetition
+        presence_penalty=0.5,           # Set to 0.5 to encourage new topics
     )
 )
 
